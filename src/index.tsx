@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import Teaser1 from './teaser1/Teaser1Page';
 import Teaser1part2 from './teaser1/Teaser1Page2';
+import Teaser2 from './teaser2/Teaser2Page';
+import Teaser2part2 from './teaser2/Teaser2Page2';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,6 +18,8 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="/22:22" element={<Teaser1 />} />
       <Route path="/wspomnienie1" element={<Teaser1part2 />} />
+      <Route path="/liczenietrwa" element={<Teaser2 />} />
+      <Route path="/ontambyl" element={<Teaser2part2 />} />
     </Routes>
   </BrowserRouter>
 );
