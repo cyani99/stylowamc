@@ -6,10 +6,10 @@ export default function Teaser3() {
     console.log("Twój pomocnik ma dla Ciebie wiadomość, wróć do niego jutro pomiędzy 23:00 a 00:00")
 
   return (
-    <div className="flex justify-center items-center ">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className="flex justify-center items-center ">
         <img onClick={()=>{
             navigator('/')
         }} className="w-1/2" src={dziennik}></img>
-    </div>
+    </a>
   );
 }
