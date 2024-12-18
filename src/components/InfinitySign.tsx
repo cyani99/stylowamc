@@ -23,7 +23,7 @@ function InfinitySign (){
       return <Completionist />;
     } else {
       // Render a countdown
-      return <span onClick={()=>{setTimer(!timer)}} className='text-yellow-500 text-4xl'>{days}:{hours}:{minutes}:{seconds}</span>;
+      return <span onDoubleClick={()=>{setTimer(!timer)}} className='text-yellow-500 text-4xl'>{days}:{hours}:{minutes}:{seconds}</span>;
     }
   };
   
@@ -33,7 +33,7 @@ function InfinitySign (){
       {timer ? ( <Countdown
     date={'2024-12-29T22:22:22'}
     renderer={renderer}
-  />) : (<svg onClick={()=>{setTimer(!timer)}}
+  />) : (<svg onDoubleClick={()=>{setTimer(!timer)}}
     className="w-48 h-24"
     viewBox="0 0 200 100"
     xmlns="http://www.w3.org/2000/svg"
