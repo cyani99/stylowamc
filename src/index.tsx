@@ -8,6 +8,7 @@ import Teaser1 from './teaser1/Teaser1Page';
 import Teaser1part2 from './teaser1/Teaser1Page2';
 import Teaser2 from './teaser2/Teaser2Page';
 import Teaser2part2 from './teaser2/Teaser2Page2';
+import Teaser3 from './teaser3/Teaser3Page';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,6 +21,7 @@ root.render(
       <Route path="/wspomnienie1" element={<Teaser1part2 />} />
       <Route path="/liczenietrwa" element={<Teaser2 />} />
       <Route path="/ontambyl" element={<Teaser2part2 />} />
+      <Route path="/nauczsiewkonculiczyc" element={<Teaser3 />} />
     </Routes>
   </BrowserRouter>
 );

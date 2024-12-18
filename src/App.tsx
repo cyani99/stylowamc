@@ -3,14 +3,18 @@ import logo from './logo.svg';
 import './App.css';
 import InfinitySign from './components/InfinitySign';
 import { useNavigate } from 'react-router';
+import Countdown from 'react-countdown';
 
 function App() {
   const navigator = useNavigate();
 
 
+
   return (
     <div className="bg-white">
+        
       <InfinitySign />
+   
       <div
         onClick={() => {
           navigator("/22:22");
