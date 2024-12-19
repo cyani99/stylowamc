@@ -9,6 +9,7 @@ import Teaser1part2 from './teaser1/Teaser1Page2';
 import Teaser2 from './teaser2/Teaser2Page';
 import Teaser2part2 from './teaser2/Teaser2Page2';
 import Teaser3 from './teaser3/Teaser3Page';
+import Teaser4 from './teaser4/Teaser4Page';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,11 +18,12 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/22:22" element={<Teaser1 />} />
-      <Route path="/wspomnienie1" element={<Teaser1part2 />} />
-      <Route path="/liczenietrwa" element={<Teaser2 />} />
-      <Route path="/ontambyl" element={<Teaser2part2 />} />
-      <Route path="/nauczsiewkonculiczyc" element={<Teaser3 />} />
+      <Route path={process.env.REACT_APP_SPRYTNIE_UKRYTY_URL1} element={<Teaser1 />} />
+      <Route path={process.env.REACT_APP_SPRYTNIE_UKRYTY_URL2} element={<Teaser1part2 />} />
+      <Route path={process.env.REACT_APP_SPRYTNIE_UKRYTY_URL3} element={<Teaser2 />} />
+      <Route path={process.env.REACT_APP_SPRYTNIE_UKRYTY_URL4} element={<Teaser2part2 />} />
+      <Route path={process.env.REACT_APP_SPRYTNIE_UKRYTY_URL5} element={<Teaser3 />} />
+      <Route path={process.env.REACT_APP_SPRYTNIE_UKRYTY_URL6} element={<Teaser4 />} />
     </Routes>
   </BrowserRouter>
 );

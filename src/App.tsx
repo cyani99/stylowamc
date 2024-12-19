@@ -17,7 +17,8 @@ function App() {
    
       <div
         onClick={() => {
-          navigator("/22:22");
+          const nav = process.env.REACT_APP_SPRYTNIE_UKRYTY_URL1
+          navigator(nav!);
         }}
         className="left-14 top-32 fixed w-1 h-1 bg-slate-600 hover:cursor-pointer"
       ></div>
@@ -31,7 +32,8 @@ function App() {
          <div className="right-24 bottom-40 fixed w-1 h-1 bg-slate-600 hover:cursor-pointer"></div>
          <div className="right-28 bottom-40 fixed w-1 h-1 bg-slate-600 hover:cursor-pointer"></div>
          <div onClick={() => {
-            navigator("/liczenietrwa");
+          const nav = process.env.REACT_APP_SPRYTNIE_UKRYTY_URL3
+          navigator(nav!);
           }} className="right-32 bottom-40 fixed w-1 h-1 bg-slate-600 hover:cursor-pointer"></div>
          <div className="right-36 bottom-44 fixed w-1 h-1 bg-slate-600 hover:cursor-pointer"></div>
       </div>

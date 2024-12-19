@@ -9,7 +9,8 @@ export default function Teaser1() {
   return (
     <div className="flex justify-center items-center ">
         <img onClick={()=>{
-            navigator('/wspomnienie1')
+                 const nav = process.env.REACT_APP_SPRYTNIE_UKRYTY_URL2
+                 navigator(nav!);
         }} className="w-1/2" src={dziennik}></img>
     </div>
   );
