@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import Countdown from "react-countdown";
+import sminfinity from './sminfinity.gif'
+
 
 interface IRenderer{
   hours: number;
@@ -13,9 +15,25 @@ interface IRenderer{
 function InfinitySign (){
   // Define the animation
   const [timer, setTimer]= useState(false);
-  const Completionist = () => <span></span>;
+  const [infinityIsClicked, setInfinityIsClicked] = useState(false);
+  const Completionist = () => {
+    if (infinityIsClicked) return (
+      <a href="https://imgur.com/M5tvmaL">
+      <img src={sminfinity} alt="sminfinity"></img></a>
+    )
+    else{
+      return (
+      <div className="text-orange-400 bg-slate-800 p-4 rounded-xl cursor-pointer font-bold hover:bg-slate-700" onClick={()=>{setInfinityIsClicked(true);
+        start();
+      }}>TO JUŻ TEN MOMENT! KLIKNIJ I PRZENIEŚ SIĘ W TAJEMNICZE KRAINY SM!</div>)
+    }
+  }
  // Animation for the stroke dash offset
+  let audio = new Audio('/sminfinityintro.mp3')
 
+  const start = () => {
+    audio.play()
+  }
   
   const renderer = ({ hours, minutes, seconds, completed,days }: IRenderer) => {
     if (completed) {
@@ -31,9 +49,10 @@ function InfinitySign (){
   return (
     <div className="flex justify-center items-center h-screen bg-gray-900">
       {timer ? ( <Countdown
-    date={'2024-12-29T22:22:22'}
+    date={'2024-12-29T17:22:22'}
     renderer={renderer}
-  />) : (<svg onDoubleClick={()=>{setTimer(!timer)}}
+  />) : (<svg onDoubleClick={()=>{setTimer(!timer);
+  }}
     className="w-48 h-24"
     viewBox="0 0 200 100"
     xmlns="http://www.w3.org/2000/svg"
